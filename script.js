@@ -72,7 +72,17 @@ nameLengths.push(stringLength);
 let average = lengthTotal/nameLengths.length;
 console.log(average);
 */
+//below is the new arrow function I was practicing on.
+// const repeaterArrow = (word, n) => {
+//     let newString1 = "";
+//     for (i=0; i < n; i++){
+//         newString1 += word;
+//     }
+//     return newString1;
+// }
+// console.log(repeaterArrow("helloTest", 3))
 
+// below is the original function.
 function repeater(word, n){
     let newString = "";
     for (i=0; i < n; i++){
@@ -81,6 +91,10 @@ function repeater(word, n){
 return newString;
 }
 console.log(repeater("hello", 4));
+
+// New arrow function version of fullname is below this comment
+const fullName1 = (firstName, lastName) => firstName + " " + lastName;
+console.log(fullName1("Michael","Varnell"));
 
 // function to return first and last name separated by space. 
 function fullName(firstName, lastName){
@@ -91,6 +105,21 @@ console.log(fullName("Michael", "Varnell"));
 // function that takes an array of numbers and returns true
 //if the sum of all the numbers in the array is greater than 100
 // referencing the first array for my test
+// Below is the arrow function re-write
+// const hundredValid2 = (array) => {
+//     let totalOfArray = 0;
+//     for (let i of array) {
+//         totalOfArray += i;
+//     }
+//     if (totalOfArray >= 100){
+//         return true;
+//     } else { 
+//         return false;
+//     }
+// }
+// console.log(hundredValid2(array1) + " --Testing the arrow function version here");
+
+// Below is the original function written for the assignment
 function hundredValidator(array){
     totalOfArray = 0;
     for (let i of array){
@@ -106,7 +135,18 @@ console.log(hundredValidator(array1));
 
 // Write a function that takes an array of numbers and 
 // returns the average of all the numbers in the array
+//Below is the re-written arrow function 
+const averageOfArray1 = (array) => {
+    totalOfArray = 0;
+    for(let i of array){
+        totalOfArray += i;
+    }
+    let answer = totalOfArray/array.length;
+    return answer;
+}
+console.log(averageOfArray1(array1));
 
+// Below is the original function writen for the assignment
 function averageOfArray(array){
     totalOfArray = 0;
     for(let i of array){
