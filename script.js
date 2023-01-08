@@ -136,15 +136,15 @@ console.log(hundredValidator(array1));
 // Write a function that takes an array of numbers and 
 // returns the average of all the numbers in the array
 //Below is the re-written arrow function 
-const averageOfArray1 = (array) => {
-    totalOfArray = 0;
-    for(let i of array){
-        totalOfArray += i;
-    }
-    let answer = totalOfArray/array.length;
-    return answer;
-}
-console.log(averageOfArray1(array1));
+// const averageOfArray1 = (array) => {
+//     totalOfArray = 0;
+//     for(let i of array){
+//         totalOfArray += i;
+//     }
+//     let answer = totalOfArray/array.length;
+//     return answer;
+// }
+// console.log(averageOfArray1(array1));
 
 // Below is the original function writen for the assignment
 function averageOfArray(array){
@@ -161,10 +161,31 @@ console.log(averageOfArray(array1));
 // 11.	Write a function that takes two arrays of numbers and returns true 
 //if the average of the elements in the first array is greater
 // than the average of the elements in the second array.
-
+// leaving the arrays the next two functions will use below this comment
 let array5 = [4,5,6];
 let array6 = [5,6,7];
 
+// this is the new arrow function version and rewritten single function to do averages.
+const average1Array = (arrayA) => {
+    let arrayATotal = 0;
+    for (let i of arrayA){
+        arrayATotal += i;
+    }
+    arrayAAverage = arrayATotal/arrayA.length;
+    return arrayAAverage;
+}
+
+const averageArrowArrayFunc = (arrayA, arrayB) => {
+    if (average1Array(arrayA) >= average1Array(arrayB)){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(averageArrowArrayFunc(array6, array5));
+
+
+// this is the original function for the assignment
 function greaterArrayAverage(arrayA,arrayB){
     arrayATotal = 0;
     arrayBTotal = 0;
